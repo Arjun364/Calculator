@@ -12,10 +12,47 @@
     <link rel="stylesheet" href="./src/style/output/style.css">
     <!-- fontawesome link -->
     <script src="https://kit.fontawesome.com/7f4f6e1f8e.js" crossorigin="anonymous"></script>
+
+    <script src="./src/js/index.js"></script>
 </head>
 
-<body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+<body class="flex items-center justify-center flex-col gap-3">
+    <h2 class="text-[2.8rem] font-semibold">Simple Calculator</h2>
+    <div id="calaculator" class="w-[25rem] h-[30rem] border-2 border-solid border-black rounded-md shadow-lg px-5 py-6 flex flex-col gap-4">
+        <div class="w-full h-[6rem]">
+            <input id="display" type="text" class="w-full h-full border-2 border-solid focus:ring-0 focus:ring-transparent focus:border-black rounded-sm rtl:" readonly>
+        </div>
+        <div class="w-full h-[20rem] flex flex-col gap-2">
+            <div class="w-full flex items-center justify-around flex-1 gap-2">
+                <button class="btn  bg-red-500 text-white" onclick="clearDisplay() ">AC</button>
+                <button class="btn bg-black text-white" onclick="deleteLast()"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+            <div class="w-full flex items-center justify-around flex-1 gap-2">
+                <button class="btn" onclick="display('7')">7</button>
+                <button class="btn" onclick="display('8')">8</button>
+                <button class="btn" onclick="display('9')">9</button>
+                <button class="btn" onclick="display('/')"><i class="fa-solid fa-divide"></i></button>
+            </div>
+            <div class="w-full flex items-center justify-around flex-1 gap-2">
+                <button class="btn" onclick="display('4')">4</button>
+                <button class="btn" onclick="display('5')">5</button>
+                <button class="btn" onclick="display('6')">6</button>
+                <button class="btn" onclick="display('*')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="w-full flex items-center justify-around flex-1 gap-2">
+                <button class="btn" onclick="display('1')">1</button>
+                <button class="btn" onclick="display('2')">2</button>
+                <button class="btn" onclick="display('3')">3</button>
+                <button class="btn" onclick="display('-')"><i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="w-full flex items-center justify-around flex-1 gap-2">
+                <button class="btn" onclick="display('0')">0</button>
+                <button class="btn" onclick="display('.')">.</button>
+                <button class="btn" onclick="display('+')"><i class="fa-solid fa-plus"></i></button>
+                <button class="btn  bg-green-500 text-white" onclick="calculate()"><i class="fa-solid fa-equals"></i></button>
+            </div>
+        </div>
+    </div>
     <!-- flowbit Script link  -->
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>

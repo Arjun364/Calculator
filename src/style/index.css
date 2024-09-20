@@ -12,3 +12,8 @@
 body{
     @apply w-full h-[100vh];
 }
+
+.btn{
+    @apply h-full flex-1 border-2 border-solid border-black rounded-sm
+    hover:text-white hover:bg-black focus:bg-black focus:text-white text-[1.2rem];
+}
